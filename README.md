@@ -20,3 +20,5 @@ Markdown helpers
   * Druplicon ![Druplicon](https://github.com/yudasakura/snippet-library/blob/master/snippets/Assets/Icons/druplicon.png?raw=true)
   * Wordpress Logo ![Wordpress Logo](https://wordpress.com/favicon.ico)
   * Lando Logo ![Lando](https://lando.dev/favicon.ico)
+* How to reference links in the tree:
+  * Link [Snippet](/snippets/ID)
