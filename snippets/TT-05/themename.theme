@@ -1,0 +1,14 @@
+/*
+ * Add theme suggestions for views.
+ */
+function HOOK_theme_suggestions_views_view_alter(array &$suggestions, array $variables) {
+  return [
+    'views_view__' . $variables['view']->id()
+  ];
+}
+
+function HOOK_theme_suggestions_views_view(array $variables) {
+  return [
+    'views_view_display__' . $variables['view']->current_display,
+  ];
+}

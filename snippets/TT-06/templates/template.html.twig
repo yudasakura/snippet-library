@@ -1,0 +1,2 @@
+{# Sanitize a Text field contents #}
+{{ content.field_fieldname.0|render|striptags|convert_encoding('UTF-8', 'HTML-ENTITIES')|trim }}

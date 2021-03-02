@@ -1,0 +1,59 @@
+{#
+/**
+ * @file
+ * Theme override of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @see template_preprocess_views_exposed_form()
+ */
+#}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+  {{ q }}
+{% endif %}
+<div class="views-listing">
+  <div class="views-listing--keywords">
+    <div class="views-listing--container">
+      <h4>Search:</h4>
+      {{ form.keywords }}
+      <div class="views-listing--submit">
+        {{ form.actions.submit }}
+      </div>
+    </div>
+  </div>
+  <div class="views-listing--container views-listing--main">
+    <div class="views-listing--sidebar">
+      <h5>Filters</h5>
+      {{ form.actions.reset }}
+      {{ form.topics }}
+      <div class="views-listing--submit">
+        {{ form.actions.submit }}
+      </div>
+    </div>
+    <div class="views-listing--results">
+      <div class="views-listing--content-precontainer">
+        <div class="views-listing--results-counter">
+          Showing
+          <span class="results--value">
+            0
+          </span>
+          results
+          {% if form.keywords["#value"] is not empty %}
+            for
+            <span class="results--query">{{ form.keywords["#value"]}}
+              </span>
+          {% endif %}
+        </div>
+        <div class="views-listing--results-sorts">
+          {{ form.sort_bef_combine }}
+        </div>
+      </div>
+      <div class="views-listing--content-container"></div>
+    </div>
+  </div>
+</div>

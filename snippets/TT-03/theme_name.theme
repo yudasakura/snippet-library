@@ -1,0 +1,9 @@
+/*
+ * Add a class to a template's attributes.
+ */
+function themename_preprocess_node(&$variables) {
+  // Condition (example, if field exists).
+  if (isset($field)) {
+    $variables['attributes']['class'][] = 'class-name';
+  }
+} 
