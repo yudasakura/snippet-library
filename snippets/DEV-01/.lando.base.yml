@@ -3,4 +3,4 @@ recipe: pantheon
 config:
   framework: drupal8
   xdebug: false
-  composer_version: "1.10.17"
+  composer_version: "1-latest"
